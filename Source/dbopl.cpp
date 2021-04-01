@@ -1254,7 +1254,7 @@ void Chip::Setup( Bit32u rate ) {
 		 
 		Bit32s guessAdd = (Bit32u)( scale * (EnvelopeIncreaseTable[ index ] << ( RATE_SH - shift - 3 )));
 		Bit32s bestAdd = guessAdd;
-		Bit32u bestDiff = 1 << 30;
+		long bestDiff = 1 << 30;
 		for( Bit32u passes = 0; passes < 16; passes ++ ) {
 			Bit32s volume = ENV_MAX;
 			Bit32s samples = 0;
@@ -1270,7 +1270,7 @@ void Chip::Setup( Bit32u rate ) {
 
 			}
 			Bit32s diff = original - samples;
-			Bit32u lDiff = labs( diff );
+			long lDiff = labs( diff );
 			//Init last on first pass
 			if ( lDiff < bestDiff ) {
 				bestDiff = lDiff;

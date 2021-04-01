@@ -8,6 +8,8 @@ See here for binaries, screenshots etc: http://bsutherland.github.io/JuceOPLVSTi
 
 I'm sorry to say, this project is now essentially unmaintained.
 
+Note that this specific fork does bring the code up to JUCE 6 and C++17 standards -- although it was already pretty close compared to most.
+
 If you're looking for an alternative, I'd like to recommend ADLplug (https://github.com/jpcima/ADLplug). I'm not affiliated with the project, but it looks like an excellent plugin:
 
 - maintained
